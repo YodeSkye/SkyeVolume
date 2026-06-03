@@ -282,10 +282,10 @@ Inherits System.Windows.Forms.Form
         btnViewerPath.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnViewerPath.Image = My.Resources.Resources.imageSelect
         TipSettingsEX.SetImage(btnViewerPath, My.Resources.Resources.imageSelect)
-        btnViewerPath.Location = New Point(1210, 66)
+        btnViewerPath.Location = New Point(1210, 64)
         btnViewerPath.Margin = New Padding(4)
         btnViewerPath.Name = "btnViewerPath"
-        btnViewerPath.Size = New Size(28, 28)
+        btnViewerPath.Size = New Size(32, 32)
         btnViewerPath.TabIndex = 154
         btnViewerPath.TabStop = False
         TipSettingsEX.SetText(btnViewerPath, "Select An App...")
@@ -436,10 +436,10 @@ Inherits System.Windows.Forms.Form
         btnSysVCPath.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnSysVCPath.Image = My.Resources.Resources.imageSelect
         TipSettingsEX.SetImage(btnSysVCPath, My.Resources.Resources.imageSelect)
-        btnSysVCPath.Location = New Point(1210, 137)
+        btnSysVCPath.Location = New Point(1210, 135)
         btnSysVCPath.Margin = New Padding(4)
         btnSysVCPath.Name = "btnSysVCPath"
-        btnSysVCPath.Size = New Size(28, 28)
+        btnSysVCPath.Size = New Size(32, 32)
         btnSysVCPath.TabIndex = 162
         btnSysVCPath.TabStop = False
         TipSettingsEX.SetText(btnSysVCPath, "Select An App...")
@@ -454,10 +454,10 @@ Inherits System.Windows.Forms.Form
         btnWAPath.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnWAPath.Image = My.Resources.Resources.imageSelect
         TipSettingsEX.SetImage(btnWAPath, My.Resources.Resources.imageSelect)
-        btnWAPath.Location = New Point(1210, 294)
+        btnWAPath.Location = New Point(1210, 292)
         btnWAPath.Margin = New Padding(4)
         btnWAPath.Name = "btnWAPath"
-        btnWAPath.Size = New Size(28, 28)
+        btnWAPath.Size = New Size(32, 32)
         btnWAPath.TabIndex = 172
         btnWAPath.TabStop = False
         TipSettingsEX.SetText(btnWAPath, "Select An App...")
@@ -500,10 +500,10 @@ Inherits System.Windows.Forms.Form
         btnPlayerOutputCurrentPath.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnPlayerOutputCurrentPath.Image = My.Resources.Resources.imageSelect
         TipSettingsEX.SetImage(btnPlayerOutputCurrentPath, My.Resources.Resources.imageSelect)
-        btnPlayerOutputCurrentPath.Location = New Point(1210, 423)
+        btnPlayerOutputCurrentPath.Location = New Point(1210, 421)
         btnPlayerOutputCurrentPath.Margin = New Padding(4)
         btnPlayerOutputCurrentPath.Name = "btnPlayerOutputCurrentPath"
-        btnPlayerOutputCurrentPath.Size = New Size(28, 28)
+        btnPlayerOutputCurrentPath.Size = New Size(32, 32)
         btnPlayerOutputCurrentPath.TabIndex = 1024
         btnPlayerOutputCurrentPath.TabStop = False
         TipSettingsEX.SetText(btnPlayerOutputCurrentPath, "Select An App...")
@@ -518,10 +518,10 @@ Inherits System.Windows.Forms.Form
         btnSMPath.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnSMPath.Image = My.Resources.Resources.imageSelect
         TipSettingsEX.SetImage(btnSMPath, My.Resources.Resources.imageSelect)
-        btnSMPath.Location = New Point(1210, 346)
+        btnSMPath.Location = New Point(1210, 344)
         btnSMPath.Margin = New Padding(4)
         btnSMPath.Name = "btnSMPath"
-        btnSMPath.Size = New Size(28, 28)
+        btnSMPath.Size = New Size(32, 32)
         btnSMPath.TabIndex = 1027
         btnSMPath.TabStop = False
         TipSettingsEX.SetText(btnSMPath, "Select An App...")
@@ -552,10 +552,10 @@ Inherits System.Windows.Forms.Form
         btnVLCPath.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnVLCPath.Image = My.Resources.Resources.imageSelect
         TipSettingsEX.SetImage(btnVLCPath, My.Resources.Resources.imageSelect)
-        btnVLCPath.Location = New Point(1209, 241)
+        btnVLCPath.Location = New Point(1209, 239)
         btnVLCPath.Margin = New Padding(4)
         btnVLCPath.Name = "btnVLCPath"
-        btnVLCPath.Size = New Size(28, 28)
+        btnVLCPath.Size = New Size(32, 32)
         btnVLCPath.TabIndex = 167
         btnVLCPath.TabStop = False
         TipSettingsEX.SetText(btnVLCPath, "Select An App...")
@@ -570,10 +570,10 @@ Inherits System.Windows.Forms.Form
         btnMPCPath.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnMPCPath.Image = My.Resources.Resources.imageSelect
         TipSettingsEX.SetImage(btnMPCPath, My.Resources.Resources.imageSelect)
-        btnMPCPath.Location = New Point(1209, 190)
+        btnMPCPath.Location = New Point(1209, 188)
         btnMPCPath.Margin = New Padding(4)
         btnMPCPath.Name = "btnMPCPath"
-        btnMPCPath.Size = New Size(28, 28)
+        btnMPCPath.Size = New Size(32, 32)
         btnMPCPath.TabIndex = 164
         btnMPCPath.TabStop = False
         TipSettingsEX.SetText(btnMPCPath, "Select An App...")
