@@ -60,14 +60,14 @@ Partial Public Class Settings
         txbxAutoHideIntervalVolume.ContextMenuStrip = txtboxCM
         txbxAutoHideIntervalPlayer.ContextMenuStrip = txtboxCM
         txbxSMPath.ContextMenuStrip = txtboxCM
-        ShowSettings()
         Skye.UI.ThemeManager.RegisterComponent(TipSettingsEX)
         OnThemeChanged(App.CurrentTheme)
         AddHandler App.ThemeChanged, AddressOf OnThemeChanged
 
     End Sub
-    Private Sub SettingsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Frm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ShowSave() ' moved here to keep if from being overridden by theming
+        ShowSettings()
     End Sub
     Private Sub FrmPaint(sender As Object, e As PaintEventArgs) Handles MyBase.Paint
         ' Dynamic zone area based on tbarZoneRed
@@ -99,8 +99,15 @@ Partial Public Class Settings
             g.DrawRectangle(p, zArea)
         End Using
 
+        'Draw Separators
+        Using p As New Pen(Color.Black, 1)
+            g.DrawLine(p, New Point(309, 0), New Point(309, 582))
+            g.DrawLine(p, New Point(796, 0), New Point(796, 582))
+            g.DrawLine(p, New Point(0, 582), New Point(Width, 582))
+        End Using
+
     End Sub
-    Private Sub FrmMove(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Move
+    Private Sub Frm_Move(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Move
         If Me.WindowState = FormWindowState.Normal Then
             If Me.Top < My.Computer.Screen.WorkingArea.Top Then Me.Top = My.Computer.Screen.WorkingArea.Top
             If Me.Bottom > My.Computer.Screen.WorkingArea.Height + My.Computer.Screen.WorkingArea.Top Then Me.Top = My.Computer.Screen.WorkingArea.Height + My.Computer.Screen.WorkingArea.Top - Me.Height
@@ -108,7 +115,7 @@ Partial Public Class Settings
             If Me.Right > My.Computer.Screen.WorkingArea.Width + My.Computer.Screen.WorkingArea.Left Then Me.Left = My.Computer.Screen.WorkingArea.Width + My.Computer.Screen.WorkingArea.Left - Me.Width
         End If
     End Sub
-    Private Sub FrmKeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+    Private Sub Frm_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         Select Case e.KeyData
             Case Keys.F1 : My.App.ShowHelp()
             Case Keys.Escape : My.App.CloseSettings()
@@ -418,6 +425,7 @@ Partial Public Class Settings
         App.Settings.SelectedTheme = CType(CoBoxTheme.SelectedIndex, App.Theme)
         ApplyTheme()
         App.Settings.SetSave()
+        ShowSettings()
     End Sub
     Private Sub ChBoxTheme_Click(sender As Object, e As EventArgs) Handles ChBoxTheme.Click
         App.Settings.UseSystemTheme = ChBoxTheme.Checked
@@ -751,14 +759,14 @@ Partial Public Class Settings
             RegKey.Close()
             RegKey.Dispose()
             DisableLockKeys = False
-            Me.btnDisableLockKeys.Checked = False
+            btnDisableLockKeys.Checked = False
         Else
             Dim RegKey As RegistryKey = My.Computer.Registry.LocalMachine.OpenSubKey(DisableLockKeysRegPath, True)
             RegKey.SetValue(DisableLockKeysRegValue, DisableLockKeysRegData, RegistryValueKind.Binary)
             RegKey.Close()
             RegKey.Dispose()
             DisableLockKeys = True
-            Me.btnDisableLockKeys.Checked = True
+            btnDisableLockKeys.Checked = True
         End If
     End Sub
     Private Sub BtnCloseClick(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -828,8 +836,16 @@ Partial Public Class Settings
         Select Case theme
             Case App.Theme.Light
                 Skye.UI.ThemeManager.CurrentTheme = Skye.UI.SkyeThemes.Light
+                btnDisableLockKeys.FlatAppearance.BorderColor = Color.FromArgb(160, 160, 160)
+                btnDisableLockKeys.FlatAppearance.CheckedBackColor = Color.FromArgb(220, 220, 220)
+                btnDisableLockKeys.FlatAppearance.MouseOverBackColor = Color.FromArgb(230, 230, 230)
+                btnDisableLockKeys.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200)
             Case App.Theme.Dark
                 Skye.UI.ThemeManager.CurrentTheme = Skye.UI.SkyeThemes.Dark
+                btnDisableLockKeys.FlatAppearance.BorderColor = Color.FromArgb(80, 80, 80)
+                btnDisableLockKeys.FlatAppearance.CheckedBackColor = Color.FromArgb(60, 60, 60)
+                btnDisableLockKeys.FlatAppearance.MouseOverBackColor = Color.FromArgb(70, 70, 70)
+                btnDisableLockKeys.FlatAppearance.MouseDownBackColor = Color.FromArgb(90, 90, 90)
         End Select
         Skye.UI.ThemeManager.ApplyTheme(Me)
     End Sub
@@ -845,66 +861,66 @@ Partial Public Class Settings
         End If
     End Sub
     Friend Sub ShowSettings()
-        Me.tbarZoneBlue.Value = My.Settings.vBlueZone
-        Me.tbarZoneRed.Value = My.Settings.vRedZone
-        Me.txbxZoneBlue.Text = My.Settings.vBlueZone.ToString
-        Me.txbxZoneRed.Text = My.Settings.vRedZone.ToString
-        Me.InvokePaint(Me, New PaintEventArgs(Me.CreateGraphics, Me.Bounds))
-        Me.chbxShowMeters.Checked = My.Settings.ShowMeters
-        Me.chbxAutoHideVolume.Checked = My.Settings.AutoHideVolume
-        Me.chbxAutoHidePlayer.Checked = My.Settings.AutoHidePlayer
-        Me.txbxAutoHideIntervalVolume.Text = My.Settings.AutoHideIntervalVolume.ToString
-        Me.txbxAutoHideIntervalPlayer.Text = My.Settings.AutoHideIntervalPlayer.ToString
-        Me.chbxAutoHideWithFadeVolume.Checked = My.Settings.AutoHideWithFadeVolume
-        Me.chbxAutoHideWithFadePlayer.Checked = My.Settings.AutoHideWithFadePlayer
-        Me.txbxAutoHideRateVolume.Text = My.Settings.AutoHideRateVolume.ToString
-        Me.txbxAutoHideRatePlayer.Text = My.Settings.AutoHideRatePlayer.ToString
+        tbarZoneBlue.Value = App.Settings.vBlueZone
+        tbarZoneRed.Value = App.Settings.vRedZone
+        txbxZoneBlue.Text = App.Settings.vBlueZone.ToString
+        txbxZoneRed.Text = App.Settings.vRedZone.ToString
+        InvokePaint(Me, New PaintEventArgs(Me.CreateGraphics, Me.Bounds))
+        chbxShowMeters.Checked = App.Settings.ShowMeters
+        chbxAutoHideVolume.Checked = App.Settings.AutoHideVolume
+        chbxAutoHidePlayer.Checked = App.Settings.AutoHidePlayer
+        txbxAutoHideIntervalVolume.Text = App.Settings.AutoHideIntervalVolume.ToString
+        txbxAutoHideIntervalPlayer.Text = App.Settings.AutoHideIntervalPlayer.ToString
+        chbxAutoHideWithFadeVolume.Checked = App.Settings.AutoHideWithFadeVolume
+        chbxAutoHideWithFadePlayer.Checked = App.Settings.AutoHideWithFadePlayer
+        txbxAutoHideRateVolume.Text = App.Settings.AutoHideRateVolume.ToString
+        txbxAutoHideRatePlayer.Text = App.Settings.AutoHideRatePlayer.ToString
         UpdateAutoHide()
-        Me.chbxAlwaysHideOnClickVolume.Checked = My.Settings.AlwaysHideOnClickVolume
-        Me.chbxAutoShowPlayer.Checked = My.Settings.PlayerAutoShow
-        Me.cobxUnMuteOnVolumeChange.SelectedIndex = My.Settings.UnMuteOnVolumeChange
-        Me.txbxViewerName.Text = My.Settings.ViewerName
-        Me.txbxViewerPath.Text = My.Settings.ViewerPath
+        chbxAlwaysHideOnClickVolume.Checked = App.Settings.AlwaysHideOnClickVolume
+        chbxAutoShowPlayer.Checked = App.Settings.PlayerAutoShow
+        cobxUnMuteOnVolumeChange.SelectedIndex = App.Settings.UnMuteOnVolumeChange
+        txbxViewerName.Text = App.Settings.ViewerName
+        txbxViewerPath.Text = App.Settings.ViewerPath
         SetViewerPathError(False)
-        Me.txbxSysVCPath.Text = My.Settings.SystemVolumeControlPath
+        txbxSysVCPath.Text = App.Settings.SystemVolumeControlPath
         SetSysVCPathError(False)
-        Me.txbxMPCPath.Text = My.Settings.AppPathMPC
+        txbxMPCPath.Text = App.Settings.AppPathMPC
         SetMPCPathError(False)
-        Me.txbxVLCPath.Text = My.Settings.AppPathVLC
+        txbxVLCPath.Text = App.Settings.AppPathVLC
         SetVLCPathError(False)
-        Me.txbxWAPath.Text = My.Settings.AppPathWA
+        txbxWAPath.Text = App.Settings.AppPathWA
         SetWAPathError(False)
-        Me.txbxSMPath.Text = My.Settings.AppPathSM
+        txbxSMPath.Text = App.Settings.AppPathSM
         SetSMPathError(False)
-        Me.chbxPlayerOutputCurrent.Checked = My.Settings.PlayerOutputCurrent
-        Me.txbxPlayerOutputCurrentPath.Text = My.Settings.PlayerOutputCurrentPath
+        chbxPlayerOutputCurrent.Checked = App.Settings.PlayerOutputCurrent
+        txbxPlayerOutputCurrentPath.Text = App.Settings.PlayerOutputCurrentPath
         SetPlayerOutputCurrentPathError(False)
-        Me.txbxSaveEarsVolume.Text = My.Settings.vSaveEars.ToString
-        Me.txbxSaveEarsInterval.Text = My.Settings.SaveEarsInterval.ToString
-        Me.lsbxSaveEarsApps.Items.Clear()
-        Me.lsbxSaveEarsApps.Items.AddRange(My.Settings.SaveEarsApps.ToArray)
-        Me.chbxHotKeys.Checked = My.Settings.HotKeysEnabled
-        If My.Settings.HotKeysEnabled Then : Me.grbxHotKeys.Enabled = True
-        Else : Me.grbxHotKeys.Enabled = False
+        txbxSaveEarsVolume.Text = App.Settings.vSaveEars.ToString
+        txbxSaveEarsInterval.Text = App.Settings.SaveEarsInterval.ToString
+        lsbxSaveEarsApps.Items.Clear()
+        lsbxSaveEarsApps.Items.AddRange(App.Settings.SaveEarsApps.ToArray)
+        chbxHotKeys.Checked = App.Settings.HotKeysEnabled
+        If App.Settings.HotKeysEnabled Then : grbxHotKeys.Enabled = True
+        Else : grbxHotKeys.Enabled = False
         End If
-        Me.lblHotKeyVolumeInfo.Text = My.Settings.HotKeyVolume.Description
-        Me.txbxHotKeyVolumeInfo.Text = My.Settings.HotKeyVolume.Key.ToString
-        Me.txbxHotKeyVolumeInfo.Tag = My.Settings.HotKeyVolume
-        Me.txbxHotKeyVolumeInfo.Font = New Font(Me.txbxHotKeyVolumeInfo.Font, FontStyle.Bold)
-        Me.txbxHotKeyVolumeInfo.ForeColor = Color.Teal
-        Me.lblHotKeyPlayerInfo.Text = My.Settings.HotKeyPlayer.Description
-        Me.txbxHotKeyPlayerInfo.Text = My.Settings.HotKeyPlayer.Key.ToString
-        Me.txbxHotKeyPlayerInfo.Tag = My.Settings.HotKeyPlayer
-        Me.txbxHotKeyPlayerInfo.Font = New Font(Me.txbxHotKeyPlayerInfo.Font, FontStyle.Bold)
-        Me.txbxHotKeyPlayerInfo.ForeColor = Color.Teal
-        Me.lblHotKeyViewer.Text = My.Settings.HotKeyViewer.Description
-        Me.txbxHotKeyViewer.Text = My.Settings.HotKeyViewer.Key.ToString
-        Me.txbxHotKeyViewer.Tag = My.Settings.HotKeyViewer
-        Me.txbxHotKeyViewer.Font = New Font(Me.txbxHotKeyViewer.Font, FontStyle.Bold)
-        Me.txbxHotKeyViewer.ForeColor = Color.Teal
-        Me.TipSettingsEX.SetText(Me.lblHotKeyViewer, My.Settings.ViewerName + " (" + My.Settings.ViewerPath + ")")
-        Me.btnHotKeysUndo.Enabled = False
-        Me.btnHotKeysSet.Enabled = False
+        lblHotKeyVolumeInfo.Text = App.Settings.HotKeyVolume.Description
+        txbxHotKeyVolumeInfo.Text = App.Settings.HotKeyVolume.Key.ToString
+        txbxHotKeyVolumeInfo.Tag = App.Settings.HotKeyVolume
+        txbxHotKeyVolumeInfo.Font = New Font(txbxHotKeyVolumeInfo.Font, FontStyle.Bold)
+        txbxHotKeyVolumeInfo.ForeColor = Color.Teal
+        lblHotKeyPlayerInfo.Text = App.Settings.HotKeyPlayer.Description
+        txbxHotKeyPlayerInfo.Text = App.Settings.HotKeyPlayer.Key.ToString
+        txbxHotKeyPlayerInfo.Tag = App.Settings.HotKeyPlayer
+        txbxHotKeyPlayerInfo.Font = New Font(txbxHotKeyPlayerInfo.Font, FontStyle.Bold)
+        txbxHotKeyPlayerInfo.ForeColor = Color.Teal
+        lblHotKeyViewer.Text = App.Settings.HotKeyViewer.Description
+        txbxHotKeyViewer.Text = App.Settings.HotKeyViewer.Key.ToString
+        txbxHotKeyViewer.Tag = App.Settings.HotKeyViewer
+        txbxHotKeyViewer.Font = New Font(txbxHotKeyViewer.Font, FontStyle.Bold)
+        txbxHotKeyViewer.ForeColor = Color.Teal
+        TipSettingsEX.SetText(lblHotKeyViewer, App.Settings.ViewerName + " (" + App.Settings.ViewerPath + ")")
+        btnHotKeysUndo.Enabled = False
+        btnHotKeysSet.Enabled = False
         Select Case My.Settings.PlacementVolume
             Case My.App.SettingsType.Placement.TopLeft : Me.radbtnVolumePlacementTopLeft.Checked = True
             Case My.App.SettingsType.Placement.TopCenterLeft : Me.radbtnVolumePlacementTopCenterLeft.Checked = True
@@ -925,8 +941,10 @@ Partial Public Class Settings
             Case My.App.SettingsType.Placement.Center : Me.radbtnVolumePlacementCenter.Checked = True
             Case My.App.SettingsType.Placement.Manual : Me.radbtnVolumePlacementManual.Checked = True
         End Select
-        If My.FrmPlayer IsNot Nothing Then : Me.grbxPlayerPlacement.Enabled = True
-        Else : Me.grbxPlayerPlacement.Enabled = False
+        If App.FrmPlayer IsNot Nothing Then
+            grbxPlayerPlacement.Enabled = True
+        Else
+            grbxPlayerPlacement.Enabled = False
         End If
         Select Case My.Settings.PlacementPlayer
             Case My.App.SettingsType.Placement.TopLeft : Me.radbtnPlayerPlacementTopLeft.Checked = True
@@ -951,15 +969,15 @@ Partial Public Class Settings
         Dim RegKey As RegistryKey = My.Computer.Registry.LocalMachine.OpenSubKey(DisableLockKeysRegPath, False)
         If RegKey Is Nothing Then
             DisableLockKeys = False
-            Me.btnDisableLockKeys.Checked = False
+            btnDisableLockKeys.Checked = False
         Else
             Try
                 If RegKey.GetValue(DisableLockKeysRegValue) Is Nothing Then
                     DisableLockKeys = False
-                    Me.btnDisableLockKeys.Checked = False
+                    btnDisableLockKeys.Checked = False
                 Else
                     DisableLockKeys = True
-                    Me.btnDisableLockKeys.Checked = True
+                    btnDisableLockKeys.Checked = True
                 End If
             Catch ex As Exception
             Finally
@@ -1010,7 +1028,7 @@ Partial Public Class Settings
                 Me.txbxViewerPath.ForeColor = Color.Firebrick
                 Me.TipSettingsEX.SetText(Me.txbxViewerPath, "Invalid Path")
             Case False
-                Me.txbxViewerPath.ResetForeColor()
+                Me.txbxViewerPath.ForeColor = Skye.UI.ThemeManager.CurrentTheme.TextFore
                 Me.TipSettingsEX.SetText(Me.txbxViewerPath, "Path To Viewer")
         End Select
     End Sub
@@ -1020,7 +1038,7 @@ Partial Public Class Settings
                 Me.txbxSysVCPath.ForeColor = Color.Firebrick
                 Me.TipSettingsEX.SetText(Me.txbxSysVCPath, "Invalid Path")
             Case False
-                Me.txbxSysVCPath.ResetForeColor()
+                Me.txbxSysVCPath.ForeColor = Skye.UI.ThemeManager.CurrentTheme.TextFore
                 Me.TipSettingsEX.SetText(Me.txbxSysVCPath, "Path To System Volume Control")
         End Select
     End Sub
@@ -1030,7 +1048,7 @@ Partial Public Class Settings
                 Me.txbxMPCPath.ForeColor = Color.Firebrick
                 Me.TipSettingsEX.SetText(Me.txbxMPCPath, "Invalid Path")
             Case False
-                Me.txbxMPCPath.ResetForeColor()
+                Me.txbxMPCPath.ForeColor = Skye.UI.ThemeManager.CurrentTheme.TextFore
                 Me.TipSettingsEX.SetText(Me.txbxMPCPath, "Path To MPC-HC")
         End Select
     End Sub
@@ -1040,7 +1058,7 @@ Partial Public Class Settings
                 Me.txbxVLCPath.ForeColor = Color.Firebrick
                 Me.TipSettingsEX.SetText(Me.txbxVLCPath, "Invalid Path")
             Case False
-                Me.txbxVLCPath.ResetForeColor()
+                Me.txbxVLCPath.ForeColor = Skye.UI.ThemeManager.CurrentTheme.TextFore
                 Me.TipSettingsEX.SetText(Me.txbxVLCPath, "Path To VLC")
         End Select
     End Sub
@@ -1050,7 +1068,7 @@ Partial Public Class Settings
                 Me.txbxWAPath.ForeColor = Color.Firebrick
                 Me.TipSettingsEX.SetText(Me.txbxWAPath, "Invalid Path")
             Case False
-                Me.txbxWAPath.ResetForeColor()
+                Me.txbxWAPath.ForeColor = Skye.UI.ThemeManager.CurrentTheme.TextFore
                 Me.TipSettingsEX.SetText(Me.txbxWAPath, "Path To Winamp")
         End Select
     End Sub
@@ -1060,7 +1078,7 @@ Partial Public Class Settings
                 Me.txbxSMPath.ForeColor = Color.Firebrick
                 Me.TipSettingsEX.SetText(Me.txbxSMPath, "Invalid Path")
             Case False
-                Me.txbxSMPath.ResetForeColor()
+                Me.txbxSMPath.ForeColor = Skye.UI.ThemeManager.CurrentTheme.TextFore
                 Me.TipSettingsEX.SetText(Me.txbxSMPath, "Path To Skye Music")
         End Select
     End Sub
@@ -1070,7 +1088,7 @@ Partial Public Class Settings
                 Me.txbxPlayerOutputCurrentPath.ForeColor = Color.Firebrick
                 Me.TipSettingsEX.SetText(Me.txbxPlayerOutputCurrentPath, "Invalid Path")
             Case False
-                Me.txbxPlayerOutputCurrentPath.ResetForeColor()
+                Me.txbxPlayerOutputCurrentPath.ForeColor = Skye.UI.ThemeManager.CurrentTheme.TextFore
                 Me.TipSettingsEX.SetText(Me.txbxPlayerOutputCurrentPath, "Current Selection Save Path")
         End Select
     End Sub

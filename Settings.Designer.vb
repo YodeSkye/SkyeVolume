@@ -147,7 +147,7 @@ Inherits System.Windows.Forms.Form
         btnClose.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnClose.Image = My.Resources.Resources.ImageOK64
         TipSettingsEX.SetImage(btnClose, My.Resources.Resources.ImageOK64)
-        btnClose.Location = New Point(646, 607)
+        btnClose.Location = New Point(592, 588)
         btnClose.Margin = New Padding(4)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(64, 64)
@@ -167,7 +167,7 @@ Inherits System.Windows.Forms.Form
         btnRestore.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnRestore.Image = My.Resources.Resources.ImageRestore32
         TipSettingsEX.SetImage(btnRestore, My.Resources.Resources.ImageRestore32)
-        btnRestore.Location = New Point(74, 623)
+        btnRestore.Location = New Point(69, 596)
         btnRestore.Margin = New Padding(4)
         btnRestore.Name = "btnRestore"
         btnRestore.Size = New Size(48, 48)
@@ -186,7 +186,7 @@ Inherits System.Windows.Forms.Form
         btnDefaults.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnDefaults.Image = My.Resources.Resources.ImageDefaults32
         TipSettingsEX.SetImage(btnDefaults, My.Resources.Resources.ImageDefaults32)
-        btnDefaults.Location = New Point(130, 623)
+        btnDefaults.Location = New Point(125, 596)
         btnDefaults.Margin = New Padding(4)
         btnDefaults.Name = "btnDefaults"
         btnDefaults.Size = New Size(48, 48)
@@ -282,7 +282,7 @@ Inherits System.Windows.Forms.Form
         btnViewerPath.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnViewerPath.Image = My.Resources.Resources.imageSelect
         TipSettingsEX.SetImage(btnViewerPath, My.Resources.Resources.imageSelect)
-        btnViewerPath.Location = New Point(1315, 66)
+        btnViewerPath.Location = New Point(1210, 66)
         btnViewerPath.Margin = New Padding(4)
         btnViewerPath.Name = "btnViewerPath"
         btnViewerPath.Size = New Size(28, 28)
@@ -295,11 +295,11 @@ Inherits System.Windows.Forms.Form
         ' 
         txbxViewerName.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         TipSettingsEX.SetImage(txbxViewerName, Nothing)
-        txbxViewerName.Location = New Point(929, 35)
+        txbxViewerName.Location = New Point(824, 35)
         txbxViewerName.Margin = New Padding(4)
         txbxViewerName.Name = "txbxViewerName"
         txbxViewerName.ShortcutsEnabled = False
-        txbxViewerName.Size = New Size(288, 29)
+        txbxViewerName.Size = New Size(180, 29)
         txbxViewerName.TabIndex = 150
         TipSettingsEX.SetText(txbxViewerName, Nothing)
         txbxViewerName.Text = "ViewerName"
@@ -313,7 +313,7 @@ Inherits System.Windows.Forms.Form
         btnSaveEarsAppsAdd.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnSaveEarsAppsAdd.Image = My.Resources.Resources.imageSelect
         TipSettingsEX.SetImage(btnSaveEarsAppsAdd, My.Resources.Resources.imageSelect)
-        btnSaveEarsAppsAdd.Location = New Point(1316, 515)
+        btnSaveEarsAppsAdd.Location = New Point(725, 473)
         btnSaveEarsAppsAdd.Margin = New Padding(4)
         btnSaveEarsAppsAdd.Name = "btnSaveEarsAppsAdd"
         btnSaveEarsAppsAdd.Size = New Size(28, 28)
@@ -332,7 +332,7 @@ Inherits System.Windows.Forms.Form
         btnSaveEarsAppsRemove.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnSaveEarsAppsRemove.Image = My.Resources.Resources.imageClear
         TipSettingsEX.SetImage(btnSaveEarsAppsRemove, My.Resources.Resources.imageClear)
-        btnSaveEarsAppsRemove.Location = New Point(1316, 576)
+        btnSaveEarsAppsRemove.Location = New Point(725, 534)
         btnSaveEarsAppsRemove.Margin = New Padding(4)
         btnSaveEarsAppsRemove.Name = "btnSaveEarsAppsRemove"
         btnSaveEarsAppsRemove.Size = New Size(28, 28)
@@ -374,7 +374,7 @@ Inherits System.Windows.Forms.Form
         ' txbxSaveEarsInterval
         ' 
         TipSettingsEX.SetImage(txbxSaveEarsInterval, Nothing)
-        txbxSaveEarsInterval.Location = New Point(929, 572)
+        txbxSaveEarsInterval.Location = New Point(338, 530)
         txbxSaveEarsInterval.Margin = New Padding(4)
         txbxSaveEarsInterval.MaxLength = 3
         txbxSaveEarsInterval.Name = "txbxSaveEarsInterval"
@@ -388,7 +388,7 @@ Inherits System.Windows.Forms.Form
         ' txbxSaveEarsVolume
         ' 
         TipSettingsEX.SetImage(txbxSaveEarsVolume, Nothing)
-        txbxSaveEarsVolume.Location = New Point(929, 517)
+        txbxSaveEarsVolume.Location = New Point(338, 475)
         txbxSaveEarsVolume.Margin = New Padding(4)
         txbxSaveEarsVolume.MaxLength = 2
         txbxSaveEarsVolume.Name = "txbxSaveEarsVolume"
@@ -402,7 +402,7 @@ Inherits System.Windows.Forms.Form
         ' txbxAutoHideIntervalPlayer
         ' 
         TipSettingsEX.SetImage(txbxAutoHideIntervalPlayer, Nothing)
-        txbxAutoHideIntervalPlayer.Location = New Point(560, 305)
+        txbxAutoHideIntervalPlayer.Location = New Point(503, 305)
         txbxAutoHideIntervalPlayer.Margin = New Padding(4)
         txbxAutoHideIntervalPlayer.MaxLength = 3
         txbxAutoHideIntervalPlayer.Name = "txbxAutoHideIntervalPlayer"
@@ -416,7 +416,7 @@ Inherits System.Windows.Forms.Form
         ' txbxAutoHideIntervalVolume
         ' 
         TipSettingsEX.SetImage(txbxAutoHideIntervalVolume, Nothing)
-        txbxAutoHideIntervalVolume.Location = New Point(559, 76)
+        txbxAutoHideIntervalVolume.Location = New Point(502, 76)
         txbxAutoHideIntervalVolume.Margin = New Padding(4)
         txbxAutoHideIntervalVolume.MaxLength = 3
         txbxAutoHideIntervalVolume.Name = "txbxAutoHideIntervalVolume"
@@ -436,7 +436,7 @@ Inherits System.Windows.Forms.Form
         btnSysVCPath.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnSysVCPath.Image = My.Resources.Resources.imageSelect
         TipSettingsEX.SetImage(btnSysVCPath, My.Resources.Resources.imageSelect)
-        btnSysVCPath.Location = New Point(1315, 137)
+        btnSysVCPath.Location = New Point(1210, 137)
         btnSysVCPath.Margin = New Padding(4)
         btnSysVCPath.Name = "btnSysVCPath"
         btnSysVCPath.Size = New Size(28, 28)
@@ -454,7 +454,7 @@ Inherits System.Windows.Forms.Form
         btnWAPath.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnWAPath.Image = My.Resources.Resources.imageSelect
         TipSettingsEX.SetImage(btnWAPath, My.Resources.Resources.imageSelect)
-        btnWAPath.Location = New Point(1315, 294)
+        btnWAPath.Location = New Point(1210, 294)
         btnWAPath.Margin = New Padding(4)
         btnWAPath.Name = "btnWAPath"
         btnWAPath.Size = New Size(28, 28)
@@ -466,7 +466,7 @@ Inherits System.Windows.Forms.Form
         ' txbxAutoHideRateVolume
         ' 
         TipSettingsEX.SetImage(txbxAutoHideRateVolume, Nothing)
-        txbxAutoHideRateVolume.Location = New Point(559, 106)
+        txbxAutoHideRateVolume.Location = New Point(502, 106)
         txbxAutoHideRateVolume.Margin = New Padding(4)
         txbxAutoHideRateVolume.MaxLength = 4
         txbxAutoHideRateVolume.Name = "txbxAutoHideRateVolume"
@@ -480,7 +480,7 @@ Inherits System.Windows.Forms.Form
         ' txbxAutoHideRatePlayer
         ' 
         TipSettingsEX.SetImage(txbxAutoHideRatePlayer, Nothing)
-        txbxAutoHideRatePlayer.Location = New Point(560, 335)
+        txbxAutoHideRatePlayer.Location = New Point(503, 335)
         txbxAutoHideRatePlayer.Margin = New Padding(4)
         txbxAutoHideRatePlayer.MaxLength = 4
         txbxAutoHideRatePlayer.Name = "txbxAutoHideRatePlayer"
@@ -500,7 +500,7 @@ Inherits System.Windows.Forms.Form
         btnPlayerOutputCurrentPath.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnPlayerOutputCurrentPath.Image = My.Resources.Resources.imageSelect
         TipSettingsEX.SetImage(btnPlayerOutputCurrentPath, My.Resources.Resources.imageSelect)
-        btnPlayerOutputCurrentPath.Location = New Point(1315, 423)
+        btnPlayerOutputCurrentPath.Location = New Point(1210, 423)
         btnPlayerOutputCurrentPath.Margin = New Padding(4)
         btnPlayerOutputCurrentPath.Name = "btnPlayerOutputCurrentPath"
         btnPlayerOutputCurrentPath.Size = New Size(28, 28)
@@ -518,7 +518,7 @@ Inherits System.Windows.Forms.Form
         btnSMPath.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnSMPath.Image = My.Resources.Resources.imageSelect
         TipSettingsEX.SetImage(btnSMPath, My.Resources.Resources.imageSelect)
-        btnSMPath.Location = New Point(1315, 346)
+        btnSMPath.Location = New Point(1210, 346)
         btnSMPath.Margin = New Padding(4)
         btnSMPath.Name = "btnSMPath"
         btnSMPath.Size = New Size(28, 28)
@@ -530,11 +530,13 @@ Inherits System.Windows.Forms.Form
         ' btnDisableLockKeys
         ' 
         btnDisableLockKeys.Appearance = Appearance.Button
+        btnDisableLockKeys.FlatStyle = FlatStyle.Flat
+        btnDisableLockKeys.Font = New Font("Segoe UI", 12F, FontStyle.Bold Or FontStyle.Underline, GraphicsUnit.Point, CByte(0))
         TipSettingsEX.SetImage(btnDisableLockKeys, Nothing)
-        btnDisableLockKeys.Location = New Point(18, 552)
+        btnDisableLockKeys.Location = New Point(12, 509)
         btnDisableLockKeys.Margin = New Padding(4)
         btnDisableLockKeys.Name = "btnDisableLockKeys"
-        btnDisableLockKeys.Size = New Size(234, 40)
+        btnDisableLockKeys.Size = New Size(238, 40)
         btnDisableLockKeys.TabIndex = 50
         TipSettingsEX.SetText(btnDisableLockKeys, "Disables both CapsLock and NumLock keys." & vbCrLf & "App must be run as Administrator.")
         btnDisableLockKeys.Text = "Disable Lock Keys"
@@ -550,7 +552,7 @@ Inherits System.Windows.Forms.Form
         btnVLCPath.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnVLCPath.Image = My.Resources.Resources.imageSelect
         TipSettingsEX.SetImage(btnVLCPath, My.Resources.Resources.imageSelect)
-        btnVLCPath.Location = New Point(1314, 241)
+        btnVLCPath.Location = New Point(1209, 241)
         btnVLCPath.Margin = New Padding(4)
         btnVLCPath.Name = "btnVLCPath"
         btnVLCPath.Size = New Size(28, 28)
@@ -568,7 +570,7 @@ Inherits System.Windows.Forms.Form
         btnMPCPath.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnMPCPath.Image = My.Resources.Resources.imageSelect
         TipSettingsEX.SetImage(btnMPCPath, My.Resources.Resources.imageSelect)
-        btnMPCPath.Location = New Point(1314, 190)
+        btnMPCPath.Location = New Point(1209, 190)
         btnMPCPath.Margin = New Padding(4)
         btnMPCPath.Name = "btnMPCPath"
         btnMPCPath.Size = New Size(28, 28)
@@ -587,7 +589,7 @@ Inherits System.Windows.Forms.Form
         btnLog.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnLog.Image = My.Resources.Resources.ImageLog32
         TipSettingsEX.SetImage(btnLog, My.Resources.Resources.ImageLog32)
-        btnLog.Location = New Point(1295, 623)
+        btnLog.Location = New Point(1187, 596)
         btnLog.Margin = New Padding(4)
         btnLog.Name = "btnLog"
         btnLog.Size = New Size(48, 48)
@@ -607,7 +609,7 @@ Inherits System.Windows.Forms.Form
         btnHelp.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnHelp.Image = My.Resources.Resources.ImageHelp32
         TipSettingsEX.SetImage(btnHelp, My.Resources.Resources.ImageHelp32)
-        btnHelp.Location = New Point(1239, 623)
+        btnHelp.Location = New Point(1131, 596)
         btnHelp.Margin = New Padding(4)
         btnHelp.Name = "btnHelp"
         btnHelp.Size = New Size(48, 48)
@@ -638,7 +640,7 @@ Inherits System.Windows.Forms.Form
         ' txbxWAPath
         ' 
         TipSettingsEX.SetImage(txbxWAPath, Nothing)
-        txbxWAPath.Location = New Point(929, 293)
+        txbxWAPath.Location = New Point(824, 293)
         txbxWAPath.Margin = New Padding(4)
         txbxWAPath.Name = "txbxWAPath"
         txbxWAPath.ShortcutsEnabled = False
@@ -650,7 +652,7 @@ Inherits System.Windows.Forms.Form
         ' txbxSysVCPath
         ' 
         TipSettingsEX.SetImage(txbxSysVCPath, Nothing)
-        txbxSysVCPath.Location = New Point(929, 136)
+        txbxSysVCPath.Location = New Point(824, 136)
         txbxSysVCPath.Margin = New Padding(4)
         txbxSysVCPath.Name = "txbxSysVCPath"
         txbxSysVCPath.ShortcutsEnabled = False
@@ -662,7 +664,7 @@ Inherits System.Windows.Forms.Form
         ' txbxViewerPath
         ' 
         TipSettingsEX.SetImage(txbxViewerPath, Nothing)
-        txbxViewerPath.Location = New Point(929, 65)
+        txbxViewerPath.Location = New Point(824, 65)
         txbxViewerPath.Margin = New Padding(4)
         txbxViewerPath.Name = "txbxViewerPath"
         txbxViewerPath.ShortcutsEnabled = False
@@ -675,7 +677,7 @@ Inherits System.Windows.Forms.Form
         ' 
         lblSaveEarsVolume.Font = New Font("Segoe UI", 12F)
         TipSettingsEX.SetImage(lblSaveEarsVolume, Nothing)
-        lblSaveEarsVolume.Location = New Point(927, 492)
+        lblSaveEarsVolume.Location = New Point(336, 450)
         lblSaveEarsVolume.Margin = New Padding(4, 0, 4, 0)
         lblSaveEarsVolume.Name = "lblSaveEarsVolume"
         lblSaveEarsVolume.Size = New Size(161, 21)
@@ -688,7 +690,7 @@ Inherits System.Windows.Forms.Form
         ' 
         lblSaveEarsInterval.Font = New Font("Segoe UI", 12F)
         TipSettingsEX.SetImage(lblSaveEarsInterval, Nothing)
-        lblSaveEarsInterval.Location = New Point(927, 548)
+        lblSaveEarsInterval.Location = New Point(336, 506)
         lblSaveEarsInterval.Margin = New Padding(4, 0, 4, 0)
         lblSaveEarsInterval.Name = "lblSaveEarsInterval"
         lblSaveEarsInterval.Size = New Size(161, 21)
@@ -707,7 +709,7 @@ Inherits System.Windows.Forms.Form
         btnSave.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnSave.Image = My.Resources.Resources.ImageSave32
         TipSettingsEX.SetImage(btnSave, My.Resources.Resources.ImageSave32)
-        btnSave.Location = New Point(18, 623)
+        btnSave.Location = New Point(13, 596)
         btnSave.Margin = New Padding(4)
         btnSave.Name = "btnSave"
         btnSave.Size = New Size(48, 48)
@@ -740,7 +742,7 @@ Inherits System.Windows.Forms.Form
         grbxVolumePlacement.Font = New Font("Segoe UI", 12F, FontStyle.Bold Or FontStyle.Underline, GraphicsUnit.Point, CByte(0))
         grbxVolumePlacement.ForeColor = SystemColors.ControlText
         TipSettingsEX.SetImage(grbxVolumePlacement, Nothing)
-        grbxVolumePlacement.Location = New Point(610, 8)
+        grbxVolumePlacement.Location = New Point(553, 8)
         grbxVolumePlacement.Margin = New Padding(4)
         grbxVolumePlacement.Name = "grbxVolumePlacement"
         grbxVolumePlacement.Padding = New Padding(4)
@@ -1042,7 +1044,7 @@ Inherits System.Windows.Forms.Form
         grbxPlayerPlacement.Font = New Font("Segoe UI", 12F, FontStyle.Bold Or FontStyle.Underline, GraphicsUnit.Point, CByte(0))
         grbxPlayerPlacement.ForeColor = SystemColors.ControlText
         TipSettingsEX.SetImage(grbxPlayerPlacement, Nothing)
-        grbxPlayerPlacement.Location = New Point(610, 210)
+        grbxPlayerPlacement.Location = New Point(553, 210)
         grbxPlayerPlacement.Margin = New Padding(4)
         grbxPlayerPlacement.Name = "grbxPlayerPlacement"
         grbxPlayerPlacement.Padding = New Padding(4)
@@ -1343,7 +1345,7 @@ Inherits System.Windows.Forms.Form
         cobxUnMuteOnVolumeChange.DropDownStyle = ComboBoxStyle.DropDownList
         cobxUnMuteOnVolumeChange.FormattingEnabled = True
         TipSettingsEX.SetImage(cobxUnMuteOnVolumeChange, Nothing)
-        cobxUnMuteOnVolumeChange.Location = New Point(18, 200)
+        cobxUnMuteOnVolumeChange.Location = New Point(13, 162)
         cobxUnMuteOnVolumeChange.Margin = New Padding(4)
         cobxUnMuteOnVolumeChange.Name = "cobxUnMuteOnVolumeChange"
         cobxUnMuteOnVolumeChange.Size = New Size(197, 29)
@@ -1354,7 +1356,7 @@ Inherits System.Windows.Forms.Form
         ' 
         lblUnMuteOnVolumeChange.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TipSettingsEX.SetImage(lblUnMuteOnVolumeChange, Nothing)
-        lblUnMuteOnVolumeChange.Location = New Point(15, 176)
+        lblUnMuteOnVolumeChange.Location = New Point(10, 138)
         lblUnMuteOnVolumeChange.Margin = New Padding(4, 0, 4, 0)
         lblUnMuteOnVolumeChange.Name = "lblUnMuteOnVolumeChange"
         lblUnMuteOnVolumeChange.Size = New Size(227, 21)
@@ -1366,7 +1368,7 @@ Inherits System.Windows.Forms.Form
         ' chbxAutoHideWithFadeVolume
         ' 
         TipSettingsEX.SetImage(chbxAutoHideWithFadeVolume, Nothing)
-        chbxAutoHideWithFadeVolume.Location = New Point(395, 109)
+        chbxAutoHideWithFadeVolume.Location = New Point(338, 109)
         chbxAutoHideWithFadeVolume.Margin = New Padding(4)
         chbxAutoHideWithFadeVolume.Name = "chbxAutoHideWithFadeVolume"
         chbxAutoHideWithFadeVolume.Size = New Size(143, 28)
@@ -1378,7 +1380,7 @@ Inherits System.Windows.Forms.Form
         ' chbxAutoShowPlayer
         ' 
         TipSettingsEX.SetImage(chbxAutoShowPlayer, Nothing)
-        chbxAutoShowPlayer.Location = New Point(395, 370)
+        chbxAutoShowPlayer.Location = New Point(338, 370)
         chbxAutoShowPlayer.Margin = New Padding(4)
         chbxAutoShowPlayer.Name = "chbxAutoShowPlayer"
         chbxAutoShowPlayer.Size = New Size(208, 28)
@@ -1402,7 +1404,7 @@ Inherits System.Windows.Forms.Form
         grbxHotKeys.Controls.Add(lblHotKeyVolumeInfo)
         grbxHotKeys.ForeColor = SystemColors.ControlText
         TipSettingsEX.SetImage(grbxHotKeys, Nothing)
-        grbxHotKeys.Location = New Point(18, 281)
+        grbxHotKeys.Location = New Point(13, 241)
         grbxHotKeys.Margin = New Padding(4)
         grbxHotKeys.Name = "grbxHotKeys"
         grbxHotKeys.Padding = New Padding(4)
@@ -1499,7 +1501,7 @@ Inherits System.Windows.Forms.Form
         ' 
         chbxHotKeys.Font = New Font("Segoe UI", 12F, FontStyle.Bold Or FontStyle.Underline, GraphicsUnit.Point, CByte(0))
         TipSettingsEX.SetImage(chbxHotKeys, Nothing)
-        chbxHotKeys.Location = New Point(18, 257)
+        chbxHotKeys.Location = New Point(18, 222)
         chbxHotKeys.Margin = New Padding(4)
         chbxHotKeys.Name = "chbxHotKeys"
         chbxHotKeys.Size = New Size(132, 30)
@@ -1512,7 +1514,7 @@ Inherits System.Windows.Forms.Form
         ' 
         lblViewer.Font = New Font("Segoe UI", 12F, FontStyle.Bold Or FontStyle.Underline, GraphicsUnit.Point, CByte(0))
         TipSettingsEX.SetImage(lblViewer, Nothing)
-        lblViewer.Location = New Point(928, 12)
+        lblViewer.Location = New Point(823, 12)
         lblViewer.Margin = New Padding(4, 0, 4, 0)
         lblViewer.Name = "lblViewer"
         lblViewer.Size = New Size(213, 21)
@@ -1526,7 +1528,7 @@ Inherits System.Windows.Forms.Form
         lblSaveEarsApps.ContextMenuStrip = cmSaveEarsApps
         lblSaveEarsApps.Font = New Font("Segoe UI", 12F)
         TipSettingsEX.SetImage(lblSaveEarsApps, Nothing)
-        lblSaveEarsApps.Location = New Point(1087, 492)
+        lblSaveEarsApps.Location = New Point(496, 450)
         lblSaveEarsApps.Margin = New Padding(4, 0, 4, 0)
         lblSaveEarsApps.Name = "lblSaveEarsApps"
         lblSaveEarsApps.Size = New Size(134, 21)
@@ -1563,7 +1565,7 @@ Inherits System.Windows.Forms.Form
         lsbxSaveEarsApps.ContextMenuStrip = cmSaveEarsApps
         lsbxSaveEarsApps.FormattingEnabled = True
         TipSettingsEX.SetImage(lsbxSaveEarsApps, Nothing)
-        lsbxSaveEarsApps.Location = New Point(1090, 517)
+        lsbxSaveEarsApps.Location = New Point(499, 475)
         lsbxSaveEarsApps.Margin = New Padding(4)
         lsbxSaveEarsApps.Name = "lsbxSaveEarsApps"
         lsbxSaveEarsApps.Size = New Size(225, 86)
@@ -1574,7 +1576,7 @@ Inherits System.Windows.Forms.Form
         ' 
         lblSysVC.Font = New Font("Segoe UI", 12F, FontStyle.Bold Or FontStyle.Underline)
         TipSettingsEX.SetImage(lblSysVC, Nothing)
-        lblSysVC.Location = New Point(928, 113)
+        lblSysVC.Location = New Point(823, 113)
         lblSysVC.Margin = New Padding(4, 0, 4, 0)
         lblSysVC.Name = "lblSysVC"
         lblSysVC.Size = New Size(213, 21)
@@ -1587,7 +1589,7 @@ Inherits System.Windows.Forms.Form
         ' 
         lblWA.Font = New Font("Segoe UI", 12F, FontStyle.Bold Or FontStyle.Underline)
         TipSettingsEX.SetImage(lblWA, Nothing)
-        lblWA.Location = New Point(928, 270)
+        lblWA.Location = New Point(823, 270)
         lblWA.Margin = New Padding(4, 0, 4, 0)
         lblWA.Name = "lblWA"
         lblWA.Size = New Size(213, 21)
@@ -1599,7 +1601,7 @@ Inherits System.Windows.Forms.Form
         ' chbxShowMeters
         ' 
         TipSettingsEX.SetImage(chbxShowMeters, Nothing)
-        chbxShowMeters.Location = New Point(395, 169)
+        chbxShowMeters.Location = New Point(338, 169)
         chbxShowMeters.Margin = New Padding(4)
         chbxShowMeters.Name = "chbxShowMeters"
         chbxShowMeters.Size = New Size(143, 28)
@@ -1611,7 +1613,7 @@ Inherits System.Windows.Forms.Form
         ' chbxAutoHideWithFadePlayer
         ' 
         TipSettingsEX.SetImage(chbxAutoHideWithFadePlayer, Nothing)
-        chbxAutoHideWithFadePlayer.Location = New Point(395, 338)
+        chbxAutoHideWithFadePlayer.Location = New Point(338, 338)
         chbxAutoHideWithFadePlayer.Margin = New Padding(4)
         chbxAutoHideWithFadePlayer.Name = "chbxAutoHideWithFadePlayer"
         chbxAutoHideWithFadePlayer.Size = New Size(149, 28)
@@ -1623,7 +1625,7 @@ Inherits System.Windows.Forms.Form
         ' chbxAutoHideVolume
         ' 
         TipSettingsEX.SetImage(chbxAutoHideVolume, Nothing)
-        chbxAutoHideVolume.Location = New Point(395, 78)
+        chbxAutoHideVolume.Location = New Point(338, 78)
         chbxAutoHideVolume.Margin = New Padding(4)
         chbxAutoHideVolume.Name = "chbxAutoHideVolume"
         chbxAutoHideVolume.Size = New Size(162, 28)
@@ -1636,7 +1638,7 @@ Inherits System.Windows.Forms.Form
         ' 
         lblVolume.Font = New Font("Segoe UI", 12F, FontStyle.Bold Or FontStyle.Underline)
         TipSettingsEX.SetImage(lblVolume, Nothing)
-        lblVolume.Location = New Point(395, 24)
+        lblVolume.Location = New Point(338, 24)
         lblVolume.Margin = New Padding(4, 0, 4, 0)
         lblVolume.Name = "lblVolume"
         lblVolume.Size = New Size(77, 21)
@@ -1648,7 +1650,7 @@ Inherits System.Windows.Forms.Form
         ' chbxAutoHidePlayer
         ' 
         TipSettingsEX.SetImage(chbxAutoHidePlayer, Nothing)
-        chbxAutoHidePlayer.Location = New Point(395, 307)
+        chbxAutoHidePlayer.Location = New Point(338, 307)
         chbxAutoHidePlayer.Margin = New Padding(4)
         chbxAutoHidePlayer.Name = "chbxAutoHidePlayer"
         chbxAutoHidePlayer.Size = New Size(158, 28)
@@ -1661,7 +1663,7 @@ Inherits System.Windows.Forms.Form
         ' 
         lblPlayer.Font = New Font("Segoe UI", 12F, FontStyle.Bold Or FontStyle.Underline)
         TipSettingsEX.SetImage(lblPlayer, Nothing)
-        lblPlayer.Location = New Point(395, 218)
+        lblPlayer.Location = New Point(338, 218)
         lblPlayer.Margin = New Padding(4, 0, 4, 0)
         lblPlayer.Name = "lblPlayer"
         lblPlayer.Size = New Size(60, 21)
@@ -1673,7 +1675,7 @@ Inherits System.Windows.Forms.Form
         ' chbxAlwaysHideOnClickVolume
         ' 
         TipSettingsEX.SetImage(chbxAlwaysHideOnClickVolume, Nothing)
-        chbxAlwaysHideOnClickVolume.Location = New Point(395, 139)
+        chbxAlwaysHideOnClickVolume.Location = New Point(338, 139)
         chbxAlwaysHideOnClickVolume.Margin = New Padding(4)
         chbxAlwaysHideOnClickVolume.Name = "chbxAlwaysHideOnClickVolume"
         chbxAlwaysHideOnClickVolume.Size = New Size(186, 28)
@@ -1685,7 +1687,7 @@ Inherits System.Windows.Forms.Form
         ' txbxPlayerOutputCurrentPath
         ' 
         TipSettingsEX.SetImage(txbxPlayerOutputCurrentPath, Nothing)
-        txbxPlayerOutputCurrentPath.Location = New Point(929, 422)
+        txbxPlayerOutputCurrentPath.Location = New Point(824, 422)
         txbxPlayerOutputCurrentPath.Margin = New Padding(4)
         txbxPlayerOutputCurrentPath.Name = "txbxPlayerOutputCurrentPath"
         txbxPlayerOutputCurrentPath.ShortcutsEnabled = False
@@ -1698,7 +1700,7 @@ Inherits System.Windows.Forms.Form
         ' 
         lblPlayerOutputCurrentPath.Font = New Font("Segoe UI", 12F, FontStyle.Bold Or FontStyle.Underline, GraphicsUnit.Point, CByte(0))
         TipSettingsEX.SetImage(lblPlayerOutputCurrentPath, Nothing)
-        lblPlayerOutputCurrentPath.Location = New Point(946, 398)
+        lblPlayerOutputCurrentPath.Location = New Point(841, 398)
         lblPlayerOutputCurrentPath.Margin = New Padding(4, 0, 4, 0)
         lblPlayerOutputCurrentPath.Name = "lblPlayerOutputCurrentPath"
         lblPlayerOutputCurrentPath.Size = New Size(213, 21)
@@ -1710,7 +1712,7 @@ Inherits System.Windows.Forms.Form
         ' chbxPlayerOutputCurrent
         ' 
         TipSettingsEX.SetImage(chbxPlayerOutputCurrent, Nothing)
-        chbxPlayerOutputCurrent.Location = New Point(929, 398)
+        chbxPlayerOutputCurrent.Location = New Point(824, 398)
         chbxPlayerOutputCurrent.Margin = New Padding(4)
         chbxPlayerOutputCurrent.Name = "chbxPlayerOutputCurrent"
         chbxPlayerOutputCurrent.Size = New Size(21, 28)
@@ -1721,7 +1723,7 @@ Inherits System.Windows.Forms.Form
         ' txbxSMPath
         ' 
         TipSettingsEX.SetImage(txbxSMPath, Nothing)
-        txbxSMPath.Location = New Point(929, 345)
+        txbxSMPath.Location = New Point(824, 345)
         txbxSMPath.Margin = New Padding(4)
         txbxSMPath.Name = "txbxSMPath"
         txbxSMPath.ShortcutsEnabled = False
@@ -1734,7 +1736,7 @@ Inherits System.Windows.Forms.Form
         ' 
         lblSM.Font = New Font("Segoe UI", 12F, FontStyle.Bold Or FontStyle.Underline)
         TipSettingsEX.SetImage(lblSM, Nothing)
-        lblSM.Location = New Point(928, 322)
+        lblSM.Location = New Point(823, 322)
         lblSM.Margin = New Padding(4, 0, 4, 0)
         lblSM.Name = "lblSM"
         lblSM.Size = New Size(213, 21)
@@ -1746,7 +1748,7 @@ Inherits System.Windows.Forms.Form
         ' txbxVLCPath
         ' 
         TipSettingsEX.SetImage(txbxVLCPath, Nothing)
-        txbxVLCPath.Location = New Point(928, 240)
+        txbxVLCPath.Location = New Point(823, 240)
         txbxVLCPath.Margin = New Padding(4)
         txbxVLCPath.Name = "txbxVLCPath"
         txbxVLCPath.ShortcutsEnabled = False
@@ -1759,7 +1761,7 @@ Inherits System.Windows.Forms.Form
         ' 
         lblVLC.Font = New Font("Segoe UI", 12F, FontStyle.Bold Or FontStyle.Underline)
         TipSettingsEX.SetImage(lblVLC, Nothing)
-        lblVLC.Location = New Point(926, 217)
+        lblVLC.Location = New Point(821, 217)
         lblVLC.Margin = New Padding(4, 0, 4, 0)
         lblVLC.Name = "lblVLC"
         lblVLC.Size = New Size(213, 21)
@@ -1771,7 +1773,7 @@ Inherits System.Windows.Forms.Form
         ' txbxMPCPath
         ' 
         TipSettingsEX.SetImage(txbxMPCPath, Nothing)
-        txbxMPCPath.Location = New Point(928, 189)
+        txbxMPCPath.Location = New Point(823, 189)
         txbxMPCPath.Margin = New Padding(4)
         txbxMPCPath.Name = "txbxMPCPath"
         txbxMPCPath.ShortcutsEnabled = False
@@ -1784,7 +1786,7 @@ Inherits System.Windows.Forms.Form
         ' 
         lblMPC.Font = New Font("Segoe UI", 12F, FontStyle.Bold Or FontStyle.Underline)
         TipSettingsEX.SetImage(lblMPC, Nothing)
-        lblMPC.Location = New Point(926, 166)
+        lblMPC.Location = New Point(821, 166)
         lblMPC.Margin = New Padding(4, 0, 4, 0)
         lblMPC.Name = "lblMPC"
         lblMPC.Size = New Size(213, 21)
@@ -1797,7 +1799,7 @@ Inherits System.Windows.Forms.Form
         ' 
         LblSaveEars.Font = New Font("Segoe UI", 12F, FontStyle.Bold Or FontStyle.Underline, GraphicsUnit.Point, CByte(0))
         TipSettingsEX.SetImage(LblSaveEars, Nothing)
-        LblSaveEars.Location = New Point(925, 471)
+        LblSaveEars.Location = New Point(334, 429)
         LblSaveEars.Margin = New Padding(4, 0, 4, 0)
         LblSaveEars.Name = "LblSaveEars"
         LblSaveEars.Size = New Size(213, 21)
@@ -1817,7 +1819,7 @@ Inherits System.Windows.Forms.Form
         CoBoxTheme.DropDownStyle = ComboBoxStyle.DropDownList
         CoBoxTheme.FormattingEnabled = True
         TipSettingsEX.SetImage(CoBoxTheme, Nothing)
-        CoBoxTheme.Location = New Point(599, 560)
+        CoBoxTheme.Location = New Point(823, 519)
         CoBoxTheme.Name = "CoBoxTheme"
         CoBoxTheme.Size = New Size(155, 30)
         CoBoxTheme.TabIndex = 302
@@ -1827,19 +1829,19 @@ Inherits System.Windows.Forms.Form
         ' 
         LblTheme.Font = New Font("Segoe UI", 12F, FontStyle.Bold Or FontStyle.Underline, GraphicsUnit.Point, CByte(0))
         TipSettingsEX.SetImage(LblTheme, Nothing)
-        LblTheme.Location = New Point(596, 512)
+        LblTheme.Location = New Point(824, 471)
         LblTheme.Name = "LblTheme"
-        LblTheme.Size = New Size(158, 23)
+        LblTheme.Size = New Size(154, 23)
         LblTheme.TabIndex = 1039
         LblTheme.Text = "Theme"
         TipSettingsEX.SetText(LblTheme, Nothing)
-        LblTheme.TextAlign = ContentAlignment.TopCenter
+        LblTheme.TextAlign = ContentAlignment.BottomLeft
         ' 
         ' ChBoxTheme
         ' 
         ChBoxTheme.AutoSize = True
         TipSettingsEX.SetImage(ChBoxTheme, Nothing)
-        ChBoxTheme.Location = New Point(600, 535)
+        ChBoxTheme.Location = New Point(824, 494)
         ChBoxTheme.Name = "ChBoxTheme"
         ChBoxTheme.Size = New Size(161, 25)
         ChBoxTheme.TabIndex = 300
@@ -1851,7 +1853,8 @@ Inherits System.Windows.Forms.Form
         ' 
         AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1356, 684)
+        ClientSize = New Size(1248, 657)
+        Controls.Add(chbxHotKeys)
         Controls.Add(CoBoxTheme)
         Controls.Add(grbxVolumePlacement)
         Controls.Add(grbxPlayerPlacement)
@@ -1875,7 +1878,6 @@ Inherits System.Windows.Forms.Form
         Controls.Add(lblSysVC)
         Controls.Add(txbxSysVCPath)
         Controls.Add(btnSysVCPath)
-        Controls.Add(chbxHotKeys)
         Controls.Add(lsbxSaveEarsApps)
         Controls.Add(btnSaveEarsAppsAdd)
         Controls.Add(txbxSaveEarsInterval)
