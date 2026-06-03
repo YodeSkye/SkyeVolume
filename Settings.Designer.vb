@@ -204,10 +204,10 @@ Inherits System.Windows.Forms.Form
         btnHotKeyPlayerInfoDisable.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnHotKeyPlayerInfoDisable.Image = My.Resources.Resources.imageClear
         TipSettingsEX.SetImage(btnHotKeyPlayerInfoDisable, My.Resources.Resources.imageClear)
-        btnHotKeyPlayerInfoDisable.Location = New Point(202, 89)
+        btnHotKeyPlayerInfoDisable.Location = New Point(202, 87)
         btnHotKeyPlayerInfoDisable.Margin = New Padding(4)
         btnHotKeyPlayerInfoDisable.Name = "btnHotKeyPlayerInfoDisable"
-        btnHotKeyPlayerInfoDisable.Size = New Size(28, 28)
+        btnHotKeyPlayerInfoDisable.Size = New Size(32, 32)
         btnHotKeyPlayerInfoDisable.TabIndex = 0
         btnHotKeyPlayerInfoDisable.TabStop = False
         TipSettingsEX.SetText(btnHotKeyPlayerInfoDisable, "No HotKey")
@@ -222,10 +222,10 @@ Inherits System.Windows.Forms.Form
         btnHotKeyViewerDisable.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnHotKeyViewerDisable.Image = My.Resources.Resources.imageClear
         TipSettingsEX.SetImage(btnHotKeyViewerDisable, My.Resources.Resources.imageClear)
-        btnHotKeyViewerDisable.Location = New Point(202, 141)
+        btnHotKeyViewerDisable.Location = New Point(202, 139)
         btnHotKeyViewerDisable.Margin = New Padding(4)
         btnHotKeyViewerDisable.Name = "btnHotKeyViewerDisable"
-        btnHotKeyViewerDisable.Size = New Size(28, 28)
+        btnHotKeyViewerDisable.Size = New Size(32, 32)
         btnHotKeyViewerDisable.TabIndex = 0
         btnHotKeyViewerDisable.TabStop = False
         TipSettingsEX.SetText(btnHotKeyViewerDisable, "No HotKey")
@@ -316,7 +316,7 @@ Inherits System.Windows.Forms.Form
         btnSaveEarsAppsAdd.Location = New Point(725, 473)
         btnSaveEarsAppsAdd.Margin = New Padding(4)
         btnSaveEarsAppsAdd.Name = "btnSaveEarsAppsAdd"
-        btnSaveEarsAppsAdd.Size = New Size(28, 28)
+        btnSaveEarsAppsAdd.Size = New Size(32, 32)
         btnSaveEarsAppsAdd.TabIndex = 196
         btnSaveEarsAppsAdd.TabStop = False
         TipSettingsEX.SetText(btnSaveEarsAppsAdd, "Add App")
@@ -332,10 +332,10 @@ Inherits System.Windows.Forms.Form
         btnSaveEarsAppsRemove.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnSaveEarsAppsRemove.Image = My.Resources.Resources.imageClear
         TipSettingsEX.SetImage(btnSaveEarsAppsRemove, My.Resources.Resources.imageClear)
-        btnSaveEarsAppsRemove.Location = New Point(725, 534)
+        btnSaveEarsAppsRemove.Location = New Point(725, 531)
         btnSaveEarsAppsRemove.Margin = New Padding(4)
         btnSaveEarsAppsRemove.Name = "btnSaveEarsAppsRemove"
-        btnSaveEarsAppsRemove.Size = New Size(28, 28)
+        btnSaveEarsAppsRemove.Size = New Size(32, 32)
         btnSaveEarsAppsRemove.TabIndex = 198
         btnSaveEarsAppsRemove.TabStop = False
         TipSettingsEX.SetText(btnSaveEarsAppsRemove, "Remove App")
@@ -628,10 +628,10 @@ Inherits System.Windows.Forms.Form
         btnHotKeyVolumeInfoDisable.FlatAppearance.MouseOverBackColor = SystemColors.Info
         btnHotKeyVolumeInfoDisable.Image = My.Resources.Resources.imageClear
         TipSettingsEX.SetImage(btnHotKeyVolumeInfoDisable, My.Resources.Resources.imageClear)
-        btnHotKeyVolumeInfoDisable.Location = New Point(202, 37)
+        btnHotKeyVolumeInfoDisable.Location = New Point(202, 35)
         btnHotKeyVolumeInfoDisable.Margin = New Padding(4)
         btnHotKeyVolumeInfoDisable.Name = "btnHotKeyVolumeInfoDisable"
-        btnHotKeyVolumeInfoDisable.Size = New Size(28, 28)
+        btnHotKeyVolumeInfoDisable.Size = New Size(32, 32)
         btnHotKeyVolumeInfoDisable.TabIndex = 0
         btnHotKeyVolumeInfoDisable.TabStop = False
         TipSettingsEX.SetText(btnHotKeyVolumeInfoDisable, "No HotKey")
