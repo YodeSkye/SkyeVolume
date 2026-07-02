@@ -40,8 +40,8 @@ Public Class Volume
     ' Audio Meter
     Private ReadOnly _devEnum As New MMDeviceEnumerator()
     Private ReadOnly _audioDev As MMDevice = _devEnum.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia)
-    Private TimerMeter As Timer
-    Private TimerRender As Timer
+    Private ReadOnly TimerMeter As Timer
+    Private ReadOnly TimerRender As Timer
     Private _meterLeft As Single = 0.0F
     Private _meterRight As Single = 0.0F
 
@@ -383,7 +383,7 @@ Public Class Volume
             iconSize,
             iconSize
         )
-        Using img As Image = If(_isMuted, Resources.Resources.imageSoundMute, Resources.Resources.imageSound)
+        Using img As Image = If(_isMuted, My.Resources.Resources.imageSoundMute, My.Resources.Resources.imageSound)
             g.DrawImage(img, RectIcon)
         End Using
 
@@ -844,7 +844,7 @@ Public Class Volume
         CM.RenderMode = ToolStripRenderMode.System
 
         ' --- PLAYER INFO ---
-        MIPlayerInfo = New ToolStripMenuItem("Player Info", Resources.Resources.imagePlayerPlay) With {
+        MIPlayerInfo = New ToolStripMenuItem("Player Info", My.Resources.Resources.imagePlayerPlay) With {
             .ToolTipText = "LeftClick = Start / Show() Player Info" & vbCr & "RightClick = Stop Player Info"
         }
         AddHandler MIPlayerInfo.MouseUp,
@@ -858,10 +858,10 @@ Public Class Volume
         CM.Items.Add(MIPlayerInfo)
 
         ' --- PLAYERS ---
-        MIPlayerInfo_MPC = New ToolStripMenuItem("MPC-HC", Resources.Resources.imageMPC, Sub() App.OpenPlayer("MPC-HC"))
-        MIPlayerInfo_VLC = New ToolStripMenuItem("VLC", Resources.Resources.imageVLC, Sub() App.OpenPlayer("VLC"))
-        MIPlayerInfo_WA = New ToolStripMenuItem("Winamp", Resources.Resources.imageWA, Sub() App.OpenPlayer("Winamp"))
-        MIPlayerInfo_SM = New ToolStripMenuItem("Skye Music", Resources.Resources.imageSM, Sub() App.OpenPlayer("Skye Music"))
+        MIPlayerInfo_MPC = New ToolStripMenuItem("MPC-HC", My.Resources.Resources.imageMPC, Sub() App.OpenPlayer("MPC-HC"))
+        MIPlayerInfo_VLC = New ToolStripMenuItem("VLC", My.Resources.Resources.imageVLC, Sub() App.OpenPlayer("VLC"))
+        MIPlayerInfo_WA = New ToolStripMenuItem("Winamp", My.Resources.Resources.imageWA, Sub() App.OpenPlayer("Winamp"))
+        MIPlayerInfo_SM = New ToolStripMenuItem("Skye Music", My.Resources.Resources.imageSM, Sub() App.OpenPlayer("Skye Music"))
         CM.Items.Add(MIPlayerInfo_MPC)
         CM.Items.Add(MIPlayerInfo_VLC)
         CM.Items.Add(MIPlayerInfo_WA)
@@ -874,17 +874,17 @@ Public Class Volume
         CM.Items.Add(New ToolStripSeparator())
 
         ' --- SETTINGS ---
-        MISettings = New ToolStripMenuItem("Settings", Resources.Resources.imageSettings, Sub() App.ShowSettings())
+        MISettings = New ToolStripMenuItem("Settings", My.Resources.Resources.imageSettings, Sub() App.ShowSettings())
         CM.Items.Add(MISettings)
 
         ' --- HELP ---
-        CM.Items.Add(New ToolStripMenuItem("Help", Resources.Resources.ImageHelp16, Sub() App.ShowHelp()))
+        CM.Items.Add(New ToolStripMenuItem("Help", My.Resources.Resources.ImageHelp16, Sub() App.ShowHelp()))
         ' --- LOG ---
-        CM.Items.Add(New ToolStripMenuItem("Log", Resources.Resources.imageLog, Sub() App.ShowLog()))
+        CM.Items.Add(New ToolStripMenuItem("Log", My.Resources.Resources.imageLog, Sub() App.ShowLog()))
         CM.Items.Add(New ToolStripSeparator())
 
         ' --- EXIT ---
-        Dim miExit As New ToolStripMenuItem("Exit", Resources.Resources.imageClose) With {
+        Dim miExit As New ToolStripMenuItem("Exit", My.Resources.Resources.imageClose) With {
             .ToolTipText = "RightClick = Restart " & My.Application.Info.ProductName
         }
         AddHandler miExit.MouseUp,
@@ -905,7 +905,7 @@ Public Class Volume
             icon.Dispose()
             icon = Nothing
         Else
-            Return Resources.Resources.imageVolumeControl
+            Return My.Resources.Resources.imageVolumeControl
         End If
     End Function
 

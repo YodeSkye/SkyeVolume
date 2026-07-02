@@ -779,7 +779,7 @@ Public Class Player
         CM.RenderMode = ToolStripRenderMode.System
 
         ' --- Viewer ---
-        MIViewer = New ToolStripMenuItem("", Resources.Resources.imageViewer)
+        MIViewer = New ToolStripMenuItem("", My.Resources.Resources.imageViewer)
         AddHandler MIViewer.MouseUp,
             Sub(sender As Object, e As MouseEventArgs)
                 If e.Button = MouseButtons.Left Then
@@ -789,11 +789,11 @@ Public Class Player
         CM.Items.Add(MIViewer)
 
         ' --- Open File Location ---
-        MIOpenFileLocation = New ToolStripMenuItem("Open File Location", Resources.Resources.imageFolder, Sub() App.OpenFileLocation())
+        MIOpenFileLocation = New ToolStripMenuItem("Open File Location", My.Resources.Resources.imageFolder, Sub() App.OpenFileLocation())
         CM.Items.Add(MIOpenFileLocation)
 
         ' --- Copy Title ---
-        MICopyTitle = New ToolStripMenuItem("Copy Title", Resources.Resources.imageEditCopy) With {
+        MICopyTitle = New ToolStripMenuItem("Copy Title", My.Resources.Resources.imageEditCopy) With {
             .ToolTipText = "RightClick = Copy Full Path"
         }
         AddHandler MICopyTitle.MouseDown,
@@ -807,7 +807,7 @@ Public Class Player
         CM.Items.Add(MICopyTitle)
 
         ' --- Size ---
-        MISize = New ToolStripMenuItem("Size", Resources.Resources.ImageSize16)
+        MISize = New ToolStripMenuItem("Size", My.Resources.Resources.ImageSize16)
         AddHandler MISize.MouseUp,
             Sub(sender As Object, e As MouseEventArgs)
                 If e.Button = MouseButtons.Left Then
