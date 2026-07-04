@@ -1816,6 +1816,7 @@ Inherits System.Windows.Forms.Form
         ' 
         ' CoBoxTheme
         ' 
+        CoBoxTheme.BorderStyle = Skye.UI.ComboBox.ComboBorderStyle.Fixed3D
         CoBoxTheme.DropDownStyle = ComboBoxStyle.DropDownList
         CoBoxTheme.FormattingEnabled = True
         TipSettingsEX.SetImage(CoBoxTheme, Nothing)
