@@ -225,7 +225,7 @@ Namespace My
 		Friend ReadOnly TipTextColor As Color = Color.Black
 		Friend ReadOnly TipBorderColor As Color = Color.White
 		Friend ReadOnly PlacementMargin As Integer = 20
-		Private ReadOnly UserPath As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Skye\" 'UserPath is the base path for user-specific files.
+		Private ReadOnly UserPath As String = Skye.Common.StorageManager.GetAppDirectory 'UserPath is the base path for user-specific files.
 
 		' HANDLERS
 		Private Sub TimerSaveEarsTick(sender As Object, e As EventArgs)
@@ -253,6 +253,22 @@ Namespace My
             Skye.Common.RegistryHelper.BaseKey = "Software\\" + My.Application.Info.ProductName ' Set the base registry key.
 #End If
 			Skye.Common.Log.Write(My.Application.Info.ProductName + " Started")
+
+			' Check for storage lockout
+			If String.IsNullOrEmpty(App.UserPath) Then
+				MessageBox.Show(
+				$"Critical Error: {My.Application.Info.ProductName} was unable to access its local storage directory." & vbCrLf & vbCrLf &
+				"This is usually caused by temporary file locks, security software, or folder permission issues." & vbCrLf & vbCrLf &
+				"The application will now exit.",
+				$"{My.Application.Info.ProductName} - Storage Access Error",
+				MessageBoxButtons.OK,
+				MessageBoxIcon.Stop
+			)
+				' Cleanly terminate startup before any modules try to load broken paths
+				Environment.Exit(1)
+				Return
+			End If
+
 			GetSettings()
 			If Settings.UseSystemTheme Then
 				ApplyTheme(GetWindowsTheme())
