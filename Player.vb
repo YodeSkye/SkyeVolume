@@ -13,7 +13,7 @@ Public Class Player
     Private DragStartPoint As Point
     Private DragThresholdPassed As Boolean = False
     Private ClickHandled As Boolean = False
-    Private ReadOnly TimerAutoHide As New Timer
+    Private TimerAutoHide As New Timer
     Private ReadOnly TimerFade As Timer
     Private Const CardPadding As Integer = 6
     Private Const HiddenBorder As Integer = 7 ' Windows invisible resize border
@@ -25,7 +25,7 @@ Public Class Player
     Private ReadOnly FontSmall As New Font("Segoe UI Semibold", 12.0!, FontStyle.Bold)
     Private ReadOnly FontMedium As New Font("Segoe UI Semibold", 16.0!, FontStyle.Bold)
     Private ReadOnly FontLarge As New Font("Segoe UI Semibold", 22.0!, FontStyle.Bold)
-    Private ReadOnly TimerPlayer As New Timer With {.Interval = 100}
+    Private TimerPlayer As New Timer With {.Interval = 100}
 
     ' Theme Colors (updated by ApplyLightTheme / ApplyDarkTheme)
     Private _cardBack As Color
@@ -110,13 +110,24 @@ Public Class Player
             RedrawLayered()
         End If
     End Sub
-    Protected Overrides Sub OnFormClosed(e As FormClosedEventArgs)
+    Protected Overrides Sub OnFormClosing(e As FormClosingEventArgs)
         Try
+            ' Stop the timers immediately so no new ticks fire during teardown
+            If TimerPlayer IsNot Nothing Then
+                TimerPlayer.Stop()
+                TimerPlayer.Dispose()
+                TimerPlayer = Nothing
+            End If
+            If TimerAutoHide IsNot Nothing Then
+                TimerAutoHide.Stop()
+                TimerAutoHide.Dispose()
+                TimerAutoHide = Nothing
+            End If
+            ' Unhook events
             RemoveHandler App.ThemeChanged, AddressOf OnThemeChanged
-            TimerAutoHide?.Stop()
         Catch
         End Try
-        MyBase.OnFormClosed(e)
+        MyBase.OnFormClosing(e)
     End Sub
     Private Sub Frm_MouseEnter(sender As Object, e As EventArgs) Handles MyBase.MouseEnter
         If TimerFade.Enabled Then
@@ -373,11 +384,13 @@ Public Class Player
 
     ' HANDLERS
     Private Sub TimerPlayer_Tick(sender As Object, e As EventArgs)
+        If Me.IsDisposed OrElse Not Me.IsHandleCreated Then Return
         UpdatePlayer()
     End Sub
     Private Sub AutoHideTimer_Tick(sender As Object, e As EventArgs)
+        If Me.IsDisposed OrElse Not Me.IsHandleCreated Then Return
         If Not MouseInFormBounds() AndAlso Not CM.Visible Then
-            TimerAutoHide.Stop()
+            TimerAutoHide?.Stop()
             HideWithFade()
         End If
     End Sub

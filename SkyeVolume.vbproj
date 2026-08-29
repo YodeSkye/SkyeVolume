@@ -64,8 +64,8 @@
     <DebugType>None</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="NAudio" Version="2.3.0" />
-    <PackageReference Include="SkyeLibrary" Version="1.5.17" />
+    <PackageReference Include="NAudio" Version="3.0.1" />
+    <PackageReference Include="SkyeLibrary" Version="1.5.37" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="MainForm.Designer.vb">
