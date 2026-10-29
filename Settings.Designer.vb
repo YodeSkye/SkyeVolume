@@ -96,9 +96,9 @@ Inherits System.Windows.Forms.Form
         txbxHotKeyVolumeInfo = New TextBox()
         txbxHotKeyPlayerInfo = New TextBox()
         txbxHotKeyViewer = New TextBox()
+        lblHotKeyVolumeInfo = New Label()
         lblHotKeyViewer = New Label()
         lblHotKeyPlayerInfo = New Label()
-        lblHotKeyVolumeInfo = New Label()
         chbxHotKeys = New CheckBox()
         lblViewer = New Label()
         lblSaveEarsApps = New Label()
@@ -1396,12 +1396,12 @@ Inherits System.Windows.Forms.Form
         grbxHotKeys.Controls.Add(txbxHotKeyVolumeInfo)
         grbxHotKeys.Controls.Add(txbxHotKeyPlayerInfo)
         grbxHotKeys.Controls.Add(txbxHotKeyViewer)
-        grbxHotKeys.Controls.Add(lblHotKeyViewer)
         grbxHotKeys.Controls.Add(btnHotKeyVolumeInfoDisable)
         grbxHotKeys.Controls.Add(btnHotKeyViewerDisable)
         grbxHotKeys.Controls.Add(btnHotKeyPlayerInfoDisable)
-        grbxHotKeys.Controls.Add(lblHotKeyPlayerInfo)
         grbxHotKeys.Controls.Add(lblHotKeyVolumeInfo)
+        grbxHotKeys.Controls.Add(lblHotKeyViewer)
+        grbxHotKeys.Controls.Add(lblHotKeyPlayerInfo)
         grbxHotKeys.ForeColor = SystemColors.ControlText
         TipSettingsEX.SetImage(grbxHotKeys, Nothing)
         grbxHotKeys.Location = New Point(13, 241)
@@ -1455,15 +1455,29 @@ Inherits System.Windows.Forms.Form
         txbxHotKeyViewer.TextAlign = HorizontalAlignment.Center
         txbxHotKeyViewer.WordWrap = False
         ' 
+        ' lblHotKeyVolumeInfo
+        ' 
+        lblHotKeyVolumeInfo.BackColor = Color.Transparent
+        lblHotKeyVolumeInfo.ForeColor = SystemColors.ControlText
+        TipSettingsEX.SetImage(lblHotKeyVolumeInfo, Nothing)
+        lblHotKeyVolumeInfo.Location = New Point(9, 15)
+        lblHotKeyVolumeInfo.Margin = New Padding(4, 0, 4, 0)
+        lblHotKeyVolumeInfo.Name = "lblHotKeyVolumeInfo"
+        lblHotKeyVolumeInfo.Size = New Size(194, 23)
+        lblHotKeyVolumeInfo.TabIndex = 0
+        lblHotKeyVolumeInfo.Text = "Volume Info"
+        TipSettingsEX.SetText(lblHotKeyVolumeInfo, Nothing)
+        lblHotKeyVolumeInfo.TextAlign = ContentAlignment.BottomCenter
+        ' 
         ' lblHotKeyViewer
         ' 
         lblHotKeyViewer.BackColor = Color.Transparent
         lblHotKeyViewer.ForeColor = SystemColors.ControlText
         TipSettingsEX.SetImage(lblHotKeyViewer, Nothing)
-        lblHotKeyViewer.Location = New Point(9, 112)
+        lblHotKeyViewer.Location = New Point(9, 121)
         lblHotKeyViewer.Margin = New Padding(4, 0, 4, 0)
         lblHotKeyViewer.Name = "lblHotKeyViewer"
-        lblHotKeyViewer.Size = New Size(194, 31)
+        lblHotKeyViewer.Size = New Size(194, 21)
         lblHotKeyViewer.TabIndex = 0
         lblHotKeyViewer.Text = "Viewer"
         TipSettingsEX.SetText(lblHotKeyViewer, Nothing)
@@ -1474,28 +1488,14 @@ Inherits System.Windows.Forms.Form
         lblHotKeyPlayerInfo.BackColor = Color.Transparent
         lblHotKeyPlayerInfo.ForeColor = SystemColors.ControlText
         TipSettingsEX.SetImage(lblHotKeyPlayerInfo, Nothing)
-        lblHotKeyPlayerInfo.Location = New Point(9, 63)
+        lblHotKeyPlayerInfo.Location = New Point(9, 69)
         lblHotKeyPlayerInfo.Margin = New Padding(4, 0, 4, 0)
         lblHotKeyPlayerInfo.Name = "lblHotKeyPlayerInfo"
-        lblHotKeyPlayerInfo.Size = New Size(194, 28)
+        lblHotKeyPlayerInfo.Size = New Size(194, 21)
         lblHotKeyPlayerInfo.TabIndex = 0
         lblHotKeyPlayerInfo.Text = "Player Info"
         TipSettingsEX.SetText(lblHotKeyPlayerInfo, Nothing)
         lblHotKeyPlayerInfo.TextAlign = ContentAlignment.BottomCenter
-        ' 
-        ' lblHotKeyVolumeInfo
-        ' 
-        lblHotKeyVolumeInfo.BackColor = Color.Transparent
-        lblHotKeyVolumeInfo.ForeColor = SystemColors.ControlText
-        TipSettingsEX.SetImage(lblHotKeyVolumeInfo, Nothing)
-        lblHotKeyVolumeInfo.Location = New Point(9, 11)
-        lblHotKeyVolumeInfo.Margin = New Padding(4, 0, 4, 0)
-        lblHotKeyVolumeInfo.Name = "lblHotKeyVolumeInfo"
-        lblHotKeyVolumeInfo.Size = New Size(194, 28)
-        lblHotKeyVolumeInfo.TabIndex = 0
-        lblHotKeyVolumeInfo.Text = "Volume Info"
-        TipSettingsEX.SetText(lblHotKeyVolumeInfo, Nothing)
-        lblHotKeyVolumeInfo.TextAlign = ContentAlignment.BottomCenter
         ' 
         ' chbxHotKeys
         ' 
